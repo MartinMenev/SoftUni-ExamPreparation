@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Habitat {
-    private List<Elephant> data;
+    private final List<Elephant> data;
     private int capacity;
 
     public Habitat(int capacity) {
@@ -13,10 +13,10 @@ public class Habitat {
     }
 
     public void add(Elephant elephant) {
-        this.capacity--;
         if (capacity > 0) {
             data.add(elephant);
         }
+        capacity--;
     }
 
     public boolean remove(String name) {
